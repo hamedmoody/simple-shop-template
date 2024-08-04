@@ -18,9 +18,9 @@ jQuery(document).ready(function($){
     $('.countdown').each( function(  ){
         let time    = $(this).data('time');
         let seconds = ( Date.parse(time) / 1000 ) - parseInt( Date.now() / 1000 );
-        if( seconds ){
+        if( seconds > 0 ){
             let _this = $(this);
-            $(this).attr('data-remain', seconds );
+            $(this).attr('data-remain', seconds ).closest( '.card' ).addClass('active-countdown');
             $(_this).text( second_to_time( seconds ) );
             setInterval(function(){
                 let seconds = parseInt( $(_this).attr('data-remain') ) - 1;

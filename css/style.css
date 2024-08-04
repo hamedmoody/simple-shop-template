@@ -41,15 +41,15 @@ body{
 
 .countdown {
     position: absolute;
-    background: #ff000078;
     left: 0;
-    top: 12px;
+    bottom: 0px;
+    color: red;
+    font-size: 18px;
     text-align: center;
     padding: 5px 15px;
     border-radius: 5px;
     z-index: 9;
-    color: #FFF;
-    width: 120px;
+    right: 0;
     display: none;
 }
 
@@ -112,4 +112,150 @@ body{
 
 .card:hover img {
     transform: scale(1.02);
+}
+
+
+.cart-container {
+    background: #FFF;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+.cart-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+table.cart-table {
+    width: 100%;
+}
+
+table.cart-table td {vertical-align: middle;}
+
+table.cart-table td p {
+    display: inline-block;
+    margin: 0;
+}
+
+table.cart-table td,table.cart-table th {
+    padding: 10px;
+}
+
+table.cart-table tbody tr:nth-child(even) td {
+    background: #f6f6f6;
+}
+
+table.cart-table tbody tr td:first-child {
+    border-radius: 0 5px 5px 0;
+}
+
+table.cart-table tbody tr td:last-child {
+    border-radius: 5px 0 0 5px;
+}
+
+table.cart-table a {
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.cart-table del {
+    color: red;
+}
+
+.cart-table ins {
+    text-decoration: none;
+    color: green;
+    font-weight: 700;
+}
+
+.cart-table .currency-unit {
+    font-size: 14px;
+    color: #9c9c9c;
+}
+
+.cart-table tr > *:not(:nth-child(2)) {
+    text-align: center;
+}
+
+table.cart-table svg {
+    width: 24px;
+    height: 24px;
+    stroke: red;
+    opacity: 0;
+    transition: .3s;
+}
+
+table.cart-table tbody tr td:nth-child(2) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+table.cart-table svg path {
+    fill: red;
+}
+
+table.cart-table tr:hover svg {
+    opacity: 1;
+}
+
+
+.empty-cart {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    background: #FFF;
+}
+
+form.search input {
+    width: 400px;
+}
+
+form.search {
+    position: relative;
+}
+
+form.search button {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+a.go-to-cart svg {
+    width: 32px;
+    height: 32px;
+}
+
+a.go-to-cart {
+    text-decoration: none;
+    margin-left: 5px;
+    position: relative;
+}
+
+a.go-to-cart svg path {
+    stroke: #3F51B5;
+}
+
+a.go-to-cart span {
+    position: absolute;
+    background: #9C27B0;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #FFF;
 }
